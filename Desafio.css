@@ -3,18 +3,44 @@
     padding: 0;
 }
 
-.conteiner {
+.container1 {
     display: flex;
     justify-content: start;
     background-color: black;
     height: 60px;
     width: auto;
+    gap: 10px;
 }
 
-h1 {
+#nome {
     display: flex;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     justify-content: center;
     align-items: center;
+    margin-right: 730px;
+}
+
+#home {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;   
+}
+
+#sobre {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+#img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 40px;
+    margin-left: 10px;
 }
