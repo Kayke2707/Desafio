@@ -1,0 +1,16 @@
+.container{
+display: flex;
+align-items: center;
+height: 100px;
+width: 200vh;
+background-color: black;
+position: fixed;}
+
+sn{
+    width: 200px;
+    height: 50px;
+}
+
+
+
+ 
