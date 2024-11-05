@@ -138,6 +138,7 @@ border-radius: 15px;
 
 #contagem {
     font-size: 25px;
+}
 
 .JOGOS img{
 width: 300px;
@@ -154,5 +155,4 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
