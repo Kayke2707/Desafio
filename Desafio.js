@@ -4,10 +4,10 @@ const contador = setInterval(() => {
     const agora = new Date().getTime();
     const distancia = eventoData - agora;
 
-    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+    const dias = distancia / (1000 * 60 * 60 * 24);
+    const horas = (distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60);
+    const minutos = (distancia % (1000 * 60 * 60)) / (1000 * 60);
+    const segundos = (distancia % (1000 * 60)) / 1000;
 
     document.getElementById('dias').innerText = dias;
     document.getElementById('horas').innerText = horas;
@@ -23,3 +23,4 @@ const contador = setInterval(() => {
 document.getElementById('Bnt').addEventListener('click', () => {
     document.getElementById('mgs').innerText = "Inscrição realizada com sucesso!";
 });
+ 
