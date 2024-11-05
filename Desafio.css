@@ -70,7 +70,10 @@ color: white;
     height: 400px ;
     width: 300px;
     background-color: black;
+
     max-width: 300px;
+
+
 }
 
 .tipo{
@@ -130,4 +133,12 @@ border-radius: 15px;
 
 #contagem {
     font-size: 25px;
+
+.JOGOS img{
+width: 300px;
+height: 100%;
+}
+JOGOINFO{
+    
+>>>>>>> Stashed changes
 }
