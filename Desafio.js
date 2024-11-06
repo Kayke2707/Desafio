@@ -1,26 +1,25 @@
-const eventoData = new Date('2024-11-10T00:00:00').getTime();
-
-const contador = setInterval(() => {
+const dataFinal = new Date("2024-11-09T23:59:59").getTime();
+ 
+function contagemRegressiva() {
     const agora = new Date().getTime();
-    const distancia = eventoData - agora;
-
-    const dias = distancia / (1000 * 60 * 60 * 24);
-    const horas = (distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60);
-    const minutos = (distancia % (1000 * 60 * 60)) / (1000 * 60);
-    const segundos = (distancia % (1000 * 60)) / 1000;
-
-    document.getElementById('dias').innerText = dias;
-    document.getElementById('horas').innerText = horas;
-    document.getElementById('minutos').innerText = minutos;
-    document.getElementById('segundos').innerText = segundos;
-
-    if (distancia < 0) {
-        clearInterval(contador);
-        document.getElementById('contagem').innerText = "O evento começou!";
+    const tempoRestante = dataFinal - agora;
+ 
+    const dias = tempoRestante / (1000 * 60 * 60 * 24);
+    const horas = (tempoRestante / (1000 * 60 * 60)) % 24;
+    const minutos = (tempoRestante / (1000 * 60)) % 60;
+    const segundos = (tempoRestante / 1000) % 60;
+ 
+    document.getElementById("contagem").innerHTML =
+        `${parseInt(dias)}d ${parseInt(horas)}h ${parseInt(minutos)}m ${parseInt(segundos)}s`;
+ 
+    if (tempoRestante < 0) {
+        clearInterval(intervalo);
+        document.getElementById("contagem").innerHTML = "INSCRIÇÕES ENCERRADAS";
     }
-}, 1000);
-
+}
+ 
+const intervalo = setInterval(contagemRegressiva, 1000);
+ 
 document.getElementById('Bnt').addEventListener('click', () => {
     document.getElementById('mgs').innerText = "Inscrição realizada com sucesso!";
 });
- 
